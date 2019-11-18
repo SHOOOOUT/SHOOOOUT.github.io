@@ -1,3 +1,59 @@
-.h1 {
-    font-size: 40px;
+body {
+  font: 400 1em/1.5 "Neuton";
+  background: #1d1d1d;
+  color: rgba(255, 255, 255, 0.25);
+  text-align: center;
+  margin: 0;
+}
+
+.sns-account {
+  list-style: none;
+  overflow: hidden;
+  margin: 2em 0 0 auto;
+}
+
+.sns-account li {
+  float: left;
+  margin: 0 8px 8px 0;
+  padding: 0;
+}
+
+.sns-account li a::before {
+  background-color: #eee;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  color: #333;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 16px;
+  height: 44px; /* Button height */
+  line-height: 44px; /* Button height */
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 44px; /* Button width */
+}
+
+.sns-account li a:hover::before {
+  color: #fff;
+}
+
+.sns-account li a[href*="twitter.com"]::before {
+  content: "\f099";
+}
+.sns-account li a[href*="facebook.com"]::before {
+  content: "\f09a";
+}
+.sns-account li a[href*="github.com"]::before {
+  content: "\f09b";
+}
+
+.sns-account li a[href*="twitter.com"]:hover::before {
+  background-color: #55acee;
+}
+.sns-account li a[href*="facebook.com"]:hover::before {
+  background-color: #3b5998;
+}
+.sns-account li a[href*="github.com"]:hover::before {
+  background-color: #0c0101;
 }
