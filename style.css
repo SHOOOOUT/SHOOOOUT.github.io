@@ -130,16 +130,33 @@ main span {
     width: 50%;
   }
 
-  .career-myimage li {
-    list-style: none;
-    margin: 0 8px 8px 0;
-    padding: 0;
-  }
-
   .career-myimage img {
     display: inline-block;
     width: 40%;
     padding-top: 5%;
     padding-left: 5%;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .career-myimage {
+    font-family: "HiraKakuProN-W3";
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 95%;
+  }
+  .career-myimage p {
+    display: inline-block;
+    text-align: center;
+    margin: 20px auto;
+    width: 90%;
+  }
+
+  .career-myimage img {
+    display: inline-block;
+    text-align: center;
+    margin: 10px auto;
+    width: 90%;
   }
 }
