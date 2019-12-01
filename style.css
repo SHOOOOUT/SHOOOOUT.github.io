@@ -69,6 +69,8 @@ main {
   display: inline-block;
   margin: 15% auto;
   font-family: "Impact";
+  animation: anime1 2s ease;
+  /* text-shadow: 0 0 10px #ff0; */
 }
 
 main span {
@@ -77,43 +79,51 @@ main span {
   padding: 0.25em 0 0.33em;
   display: block;
   margin: 0 auto;
-  text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
 }
 
-/*   .particletext {
-    text-align: center;
-    font-size: 48px;
-    position: relative;
-    &.bubbles {
-      > .particle {
-        opacity: 0;
-        position: absolute;
-        background-color: rgba(33, 150, 243, 0.5);
-        animation: bubbles 3s ease-in infinite;
-        border-radius: 100%;
-      }
-    }
-}*/
-
-/* lines {
-  position: absolute;
-  background-color: rgba(244, 67, 54, 0.5);
-  animation: lines 3s linear infinite;
-}
-
-@keyframes lines {
-  0%,
-  50%,
+@keyframes anime1 {
+  0% {
+    opacity: 0; /* 透明度指定 */
+  }
   100% {
-    transform: translateY(0%);
+    opacity: 1; /* 透明度指定 */
   }
-  25% {
-    transform: translateY(100%);
-  }
-  75% {
-    transform: translateY(-100%);
-  }
-} */
+}
+
+/* ここから */
+.neon {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  text-shadow: 0 0 50px #f15f97;
+  letter-spacing: 5px;
+}
+
+.neon:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  z-index: -1;
+  color: #f15f97;
+  filter: blur(15px);
+}
+
+.neon:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f15f97;
+  z-index: -2;
+  opacity: 0.3;
+  filter: blur(50px);
+}
+/* ここまで */
 
 .aboutme {
   background-color: #eee;
