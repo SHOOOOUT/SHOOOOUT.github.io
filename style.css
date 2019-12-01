@@ -70,7 +70,7 @@ main {
   margin: 15% auto;
   font-family: "Impact";
   animation: anime1 2s ease;
-  /* text-shadow: 0 0 10px #ff0; */
+  text-shadow: 0 0 10px rgb(132, 185, 33);
 }
 
 main span {
@@ -83,46 +83,14 @@ main span {
 
 @keyframes anime1 {
   0% {
-    opacity: 0; /* 透明度指定 */
+    opacity: 0;
   }
   100% {
-    opacity: 1; /* 透明度指定 */
+    opacity: 1;
   }
 }
 
 /* ここから */
-.neon {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: black;
-  text-shadow: 0 0 50px #f15f97;
-  letter-spacing: 5px;
-}
-
-.neon:after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0 20px;
-  z-index: -1;
-  color: #f15f97;
-  filter: blur(15px);
-}
-
-.neon:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #f15f97;
-  z-index: -2;
-  opacity: 0.3;
-  filter: blur(50px);
-}
 /* ここまで */
 
 .aboutme {
